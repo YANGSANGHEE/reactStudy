@@ -1,0 +1,30 @@
+@import url(./reset.css);
+
+main {
+  padding: 5vw 15vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main > section {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 200px 200px 200px;
+  gap: 2vw;
+}
+main > section > div {
+  border: 1px solid #333;
+  font-size: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: ease 0.5s;
+}
+main > section > div:hover {
+  border: none;
+  background-color: salmon;
+  color: #fff;
+}

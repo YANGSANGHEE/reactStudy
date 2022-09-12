@@ -1,0 +1,15 @@
+@import url(./reset.css);
+
+footer {
+  width: 100vw;
+  height: 200px;
+  background-color: #555;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer > p {
+  font-size: 2vw;
+  text-align: center;
+}
