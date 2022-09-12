@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ScrollBox from './Component/ScrollBox.js';
 import EventPractice from './Component/EventPractice.js';
 import Refdom from './Component/Refdom.js';
 import Header from './Component/Header.js';
@@ -23,16 +24,14 @@ import Footer from './Component/Footer.js';
 // }
 
 class App extends Component {
-  input = React.createRef();
-
-  handleFocus = () => {
-    this.input.current.focus();
-  };
   render() {
     return (
       <>
-        <EventPractice />
-        <Refdom />
+        {/* 컴포넌트에 ref 달고 내부 메서드 사용 */}
+        <ScrollBox ref={(ref) => (this.scrollBox = ref)} />
+        <button onClick={() => this.scrollBox.scrollToBottom()}>
+          밑에가즈아
+        </button>
       </>
     );
   }
