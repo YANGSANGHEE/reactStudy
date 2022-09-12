@@ -1,5 +1,6 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import EventPractice from './Component/EventPractice.js';
+import Refdom from './Component/Refdom.js';
 import Header from './Component/Header.js';
 import Main from './Component/Main.js';
 import Main2 from './Component/Main2.js';
@@ -22,10 +23,16 @@ import Footer from './Component/Footer.js';
 // }
 
 class App extends Component {
+  input = React.createRef();
+
+  handleFocus = () => {
+    this.input.current.focus();
+  };
   render() {
     return (
       <>
         <EventPractice />
+        <Refdom />
       </>
     );
   }

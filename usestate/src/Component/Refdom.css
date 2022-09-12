@@ -1,0 +1,15 @@
+input[type='password'] {
+  width: 200px;
+  height: 50px;
+  font-size: 2rem;
+}
+
+input[type='password']:focus {
+  border: 3px solid red;
+}
+.sucess {
+  background-color: lightgreen;
+}
+.failure {
+  background-color: lightcoral;
+}
