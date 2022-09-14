@@ -1,10 +1,11 @@
 import { Component } from 'react';
 import EventPractice from './Component/EventPractice.js';
-import Header from './Component/Header.js';
-import Main from './Component/Main.js';
-import Main2 from './Component/Main2.js';
-import Say from './Component/Say.js';
-import Footer from './Component/Footer.js';
+import IterationSample from './Component/IterationSample.js';
+// import Header from './Component/Header.js';
+// import Main from './Component/Main.js';
+// import Main2 from './Component/Main2.js';
+// import Say from './Component/Say.js';
+// import Footer from './Component/Footer.js';
 
 // class App extends Component {
 //   render() {
@@ -26,6 +27,7 @@ class App extends Component {
     return (
       <>
         <EventPractice />
+        <IterationSample />
       </>
     );
   }
