@@ -1,31 +1,34 @@
 import { Component } from 'react';
-import EventPractice from './Component/EventPractice.js';
-import Header from './Component/Header.js';
-import Main from './Component/Main.js';
-import Main2 from './Component/Main2.js';
-import Say from './Component/Say.js';
-import Footer from './Component/Footer.js';
+import Lifecircle from './Component/Lifecircle.js';
+import ErrorBoundary from './Component/ErrorBoundary.js';
 
-// class App extends Component {
-//   render() {
-//     return (
-//       <>
-//         <Header></Header>
-//         {/* Prop 렌더링 */}
-//         <Main name='1'></Main>
-//         <Main2></Main2>
-//         <Say></Say>
-//         <Footer>푸터</Footer>
-//       </>
-//     );
-//   }
-// }
+//랜덤 색상 생성
+function getColor() {
+  return '#' + Math.floor(Math.random() * 16777215).toString(16);
+  // Math.random 메서드로 hex 색상코드넘버 뽑아냄 (toString(16)=>16진법)
+  // ex) 최종 return 값 #00000
+}
 
 class App extends Component {
+  state = {
+    color: `#00000` // color 초기값 설정
+  }
+
+  handleClick = () => {
+    this.setState({
+      color: getColor() // color는 getColor의 리턴값으로 받음
+    });
+  }
+
+
   render() {
     return (
       <>
-        <EventPractice />
+        <button onClick={this.handleClick}>랜덤색상</button>
+        <ErrorBoundary>
+          <Lifecircle color={this.state.color} />
+          {/* 버튼 클릭시 랜덤으로 색상이 출력됨*/}
+        </ErrorBoundary>
       </>
     );
   }
